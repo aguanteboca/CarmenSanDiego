@@ -1,0 +1,4 @@
+package applicationModels
+
+class MenuDeAccionesModel {
+}

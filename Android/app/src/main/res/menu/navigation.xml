@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ordenArresto"
+        android:icon="@drawable/ic_recent_actors_black_24dp"
+        android:title="Orden de arresto" />
+
+    <item
+        android:id="@+id/viajar"
+        android:icon="@drawable/ic_flight_takeoff_black_24dp"
+        android:title="Viajar" />
+
+    <item
+        android:id="@+id/pistas"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Pistas" />
+
+</menu>

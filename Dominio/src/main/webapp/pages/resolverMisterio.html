@@ -1,0 +1,155 @@
+<div>
+    <h1>{{ title }}</h1><br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Panel de viajar -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4>Viajar a: {{ viewData.paisSeleccionado.nombre }}</h4>
+                </div>
+                <div class="panel-body">
+                    <a ng-click="viajar()" class="btn btn-default">Viajar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <h2 style="font-style: italic">Estas en: {{ caso.pais.nombre }} </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"> 
+        <div class="col-md-6">
+            <!--Tabla de paises posibles para viajar--> 
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-center">Posibilidades</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="conexion in caso.pais.conexiones">
+                    <td class="text-center">
+                        <input name="checkboxPais" type="radio" ng-model="viewData.paisSeleccionado" ng-value="conexion" id="{{conexion.id}}"/> 
+                    </td>
+                    <td> <label for="{{conexion.id}}">{{conexion.nombre}}</label> </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Lista de lugares -->
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4>Investigar</h4>
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="lugar in caso.pais.lugares">
+                        <a ng-click="getPista(lugar)" class="btn btn-default btn-block">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> {{ lugar }}
+                        </a><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!--Paises visitados y fallidos-->
+        <div class="col-md-3"> 
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th class="text-center">Paises Visitados</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="paisVisitado in caso.paisesVisitados">
+                    <td> {{ paisVisitado }} </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-3">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th class="text-center">Paises Fallidos</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="paisFallido in caso.paisesFallidos">
+                    <td> {{ paisFallido }} </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6">
+        <!-- Panel de Orden de arresto -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4>Pedir Orden contra: </h4>
+            </div>
+            <div class="panel-body">
+                <div class="form-group col-md-8">
+                    <select ng-model="villanoSeleccionado" ng-options="villano.id as villano.nombre for villano in villanos" value="villanoSeleccionado" class="form-control"></select><hr>
+                    <a ng-click="emitirOrdenArresto()" class="btn btn-warning">Pedir Orden</a>
+                </div>                
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Investigar -->
+    <div id="modalLugar" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Visitando: {{ lugarSeleccionado }}</h2>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <h3>Pistas obtenidas del lugar: </h3><br>
+                <li ng-repeat="pista in pistas"> <h4>{{ pista }}</h4> </li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+        </div>
+
+    </div>
+    </div>
+    
+    <!-- Modal Investigar -->
+    <div id="modalFinalCaso" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Final del caso</h2>
+        </div>
+        <div class="modal-body">
+            <p ng-model="finalJuego"> <h4>{{ finalJuego }}</h4>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+</div>

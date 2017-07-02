@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    }
+]

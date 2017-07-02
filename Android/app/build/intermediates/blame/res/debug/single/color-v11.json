@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

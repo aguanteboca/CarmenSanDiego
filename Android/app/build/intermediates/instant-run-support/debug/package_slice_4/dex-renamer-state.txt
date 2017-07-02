@@ -1,0 +1,4 @@
+#Sun Jul 02 15:11:17 ART 2017
+base.0=/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4
+renamed.0=classes.dex
+file.0=/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex

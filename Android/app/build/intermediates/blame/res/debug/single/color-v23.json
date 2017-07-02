@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/home/cesar/.android/build-cache/87681959fc8b3098befc6a0eb788a8e1896effd5/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/color-v23/abc_color_highlight_material.xml"
+    }
+]

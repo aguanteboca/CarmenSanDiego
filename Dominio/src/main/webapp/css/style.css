@@ -1,0 +1,11 @@
+.clickeable {
+    cursor: pointer;
+}
+
+#ul-nav > li {
+    border-bottom: transparent solid 3px;
+}
+
+#ul-nav > li.active {
+    border-bottom: #337ab7 solid 3px;
+}
