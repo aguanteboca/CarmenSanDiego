@@ -1,7 +1,4 @@
-#Sun Jul 02 15:13:04 ART 2017
-base.0=/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6b9ae908bfc404ed324083cf637921ebcf11a7f0
-renamed.1=classes2.dex
+#Mon Jul 03 15:14:24 ART 2017
+base.0=/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.1=/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1d5c8a6b9d1b5ef853b7d71edd83012ca8fd7b87/classes.dex
-base.1=/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1d5c8a6b9d1b5ef853b7d71edd83012ca8fd7b87
-file.0=/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6b9ae908bfc404ed324083cf637921ebcf11a7f0/classes.dex
+file.0=/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

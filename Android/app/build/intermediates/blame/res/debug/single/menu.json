@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/res/merged/debug/menu/navigation.xml",
+        "source": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/src/main/res/menu/navigation.xml"
+    },
+    {
         "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/menu/navigation.xml",
         "source": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/src/main/res/menu/navigation.xml"
     }

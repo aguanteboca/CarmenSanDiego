@@ -281,7 +281,8 @@ public class CarmenSanDiegoRestAPI extends ResultFactory {
           String _valueOf_1 = String.valueOf(nombreLugar);
           final RegistroLugar registro = caso.BuscarRegistroLugar(_valueOf_1);
           ResultadoJuegoAppModel _resultadoJuegoAppModel = new ResultadoJuegoAppModel(caso, registro);
-          String _json = this._jSONUtils.toJson(_resultadoJuegoAppModel);
+          String _pista = _resultadoJuegoAppModel.getPista();
+          String _json = this._jSONUtils.toJson(_pista);
           _xblockexpression_1 = ResultFactory.ok(_json);
         }
         _xtrycatchfinallyexpression = _xblockexpression_1;

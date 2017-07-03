@@ -38,7 +38,6 @@ public class ViajarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_viajar, container, false);
-
         llenarConexiones(view);
 
         final ListView lv = (ListView) view.findViewById(R.id.listConexiones);
@@ -46,10 +45,12 @@ public class ViajarFragment extends Fragment {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String conexionSeleccionada = (String) (lv.getItemAtPosition(position));
+                String conexionSeleccionada = (String) (lv.getAdapter().getItem(position));
                 viajar(conexionSeleccionada);
             }
         });
+
+
 
         return view;
     }
@@ -81,27 +82,23 @@ public class ViajarFragment extends Fragment {
         return id;
     }
 
-    public void viajar(final String nombrePaisSeleccionado) {
+    private void viajar(String paisDestino) {
         Caso caso = ((MainActivity) getActivity()).getCaso();
-        int idPaisSeleccionado = getIdPais(caso.getPais().getConexiones(), nombrePaisSeleccionado);
-
         CarmenSanDiegoService carmenSanDiegoService = new Connection().getService();
-        Viajar viajarRequest = new Viajar(caso.getId(), idPaisSeleccionado);
-        carmenSanDiegoService.viajar(viajarRequest, new Callback<Caso>() {
+        Integer idPais = getIdPais(caso.getPais().getConexiones(),paisDestino);
+
+        carmenSanDiegoService.viajar((new Viajar(idPais,caso.getId())), new Callback<Caso>(){
             @Override
             public void success(Caso caso, Response response) {
-                Toast toastOrdenEmitida = Toast.makeText(getContext(), "Conexion: "+ nombrePaisSeleccionado, Toast.LENGTH_SHORT);
-                toastOrdenEmitida.setGravity(Gravity.NO_GRAVITY, 0, 0);
-                toastOrdenEmitida.show();
+                ((MainActivity) getActivity()).setCaso(caso);
+                llenarConexiones(getView());
             }
-
             @Override
             public void failure(RetrofitError error) {
-                Log.e("error", error.getMessage());
-                error.printStackTrace();
+
             }
         });
-
     }
+
 }
 

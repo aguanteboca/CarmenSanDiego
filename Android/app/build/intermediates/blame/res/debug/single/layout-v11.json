@@ -1,7 +1,19 @@
 [
     {
+        "merged": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
         "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
         "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
@@ -12,8 +24,20 @@
         "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_template_big_media_custom.xml"
     },
     {
+        "merged": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
         "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
         "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/home/cesar/.android/build-cache/6ce3c45e2107163df67d12853995f74f52ee2954/output/res/layout-v11/notification_media_cancel_action.xml"
     },
     {
         "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",

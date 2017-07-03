@@ -2,5 +2,9 @@
     {
         "merged": "/home/cesar/Escritorio/Entrega Android/Android_CarmenSandiego/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
         "source": "/home/cesar/.android/build-cache/87681959fc8b3098befc6a0eb788a8e1896effd5/output/res/animator-v21/design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "/home/cesar/Escritorio/CarmenSanDiego/Android/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
+        "source": "/home/cesar/.android/build-cache/87681959fc8b3098befc6a0eb788a8e1896effd5/output/res/animator-v21/design_appbar_state_list_animator.xml"
     }
 ]

@@ -1,0 +1,12 @@
+target
+.idea
+*.iml
+*.yml
+*xtend-gen*
+*generated-sources*
+/bin/
+
+.classpath
+.project
+.settings/
+/bin

@@ -21,4 +21,11 @@ android:weightSum="1">
         android:textAlignment="center"
         android:id="@+id/listLugares"/>
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Seleccione un lugar para ver una pista"
+        android:id="@+id/output"/>
+
 </LinearLayout>
