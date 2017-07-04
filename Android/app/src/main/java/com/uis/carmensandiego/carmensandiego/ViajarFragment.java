@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.uis.carmensandiego.carmensandiego.adapter.ConexionesAdapter;
@@ -29,8 +30,7 @@ import retrofit.client.Response;
 
 public class ViajarFragment extends Fragment {
 
-    private List<Pais> conexiones;
-    private Caso caso;
+    TextView paisesVisitados;
 
     public ViajarFragment() {
     }
@@ -40,8 +40,11 @@ public class ViajarFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_viajar, container, false);
         llenarConexiones(view);
 
-        final ListView lv = (ListView) view.findViewById(R.id.listConexiones);
+        paisesVisitados = (TextView) view.findViewById(R.id.paisesVisitados);
 
+        paisesVisitados.setText("Paises Visitados: " +((MainActivity) getActivity()).getCaso().getPaisesVisitados());
+
+        final ListView lv = (ListView) view.findViewById(R.id.listConexiones);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -49,10 +52,12 @@ public class ViajarFragment extends Fragment {
                 viajar(conexionSeleccionada);
             }
         });
-
-
-
         return view;
+    }
+
+    private void actualizarVisitados(Caso caso) {
+
+        paisesVisitados.setText("Paises Visitados: " +(caso.getPaisesVisitados()));
     }
 
     public void llenarConexiones(View view){
@@ -62,7 +67,6 @@ public class ViajarFragment extends Fragment {
         ConexionesAdapter adapter = new ConexionesAdapter(getActivity(),conexionesNombre);
         lvConexiones.setAdapter(adapter);
     }
-
 
     public List<String> getNombreConexiones(List<Pais> pais){
         List<String> nombreConexiones = new ArrayList<>();
@@ -92,6 +96,10 @@ public class ViajarFragment extends Fragment {
             public void success(Caso caso, Response response) {
                 ((MainActivity) getActivity()).setCaso(caso);
                 llenarConexiones(getView());
+                actualizarVisitados(caso);
+                Toast toastOrdenEmitida = Toast.makeText(getContext(), "Usted a viajado a: "+ caso.getPais().getNombre(), Toast.LENGTH_SHORT);
+                toastOrdenEmitida.setGravity(Gravity.NO_GRAVITY, 0, 0);
+                toastOrdenEmitida.show();
             }
             @Override
             public void failure(RetrofitError error) {

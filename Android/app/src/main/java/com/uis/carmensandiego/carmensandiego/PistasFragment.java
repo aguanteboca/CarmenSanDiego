@@ -1,5 +1,6 @@
 package com.uis.carmensandiego.carmensandiego;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,9 +12,11 @@ import android.widget.TextView;
 
 import com.uis.carmensandiego.carmensandiego.adapter.LugaresAdapter;
 import com.uis.carmensandiego.carmensandiego.model.Caso;
+import com.uis.carmensandiego.carmensandiego.model.ResultadoJuego;
 import com.uis.carmensandiego.carmensandiego.service.CarmenSanDiegoService;
 import com.uis.carmensandiego.carmensandiego.service.Connection;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.Callback;
@@ -22,8 +25,7 @@ import retrofit.client.Response;
 
 public class PistasFragment extends Fragment {
 
-    TextView output;
-    String detallePista;
+    TextView detallePista;
 
 
     public PistasFragment() {
@@ -35,18 +37,15 @@ public class PistasFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pistas, container, false);
         llenarPista(view);
 
-        output = (TextView) view.findViewById(R.id.output);
-        output.setText("vamos lp");
+        detallePista = (TextView) view.findViewById(R.id.detallePista);
         final ListView lv = (ListView) view.findViewById(R.id.listLugares);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view,
-                                    int position, long arg3) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long arg3) {
                 String pistaSeleccionada = (String) lv.getAdapter().getItem(position);
                 mostrarPistaDe(pistaSeleccionada);
-
             }
         });
 
@@ -54,7 +53,8 @@ public class PistasFragment extends Fragment {
     }
 
     public void llenarPista(View view) {
-        List<String> nombreLugares = ((MainActivity) getActivity()).getCaso().getPais().getLugares();
+        List<String> nombreLugares = new ArrayList<>();
+        nombreLugares.addAll(((MainActivity) getActivity()).getCaso().getPais().getLugares());
         ListView lvLugares = (ListView) view.findViewById(R.id.listLugares);
         LugaresAdapter adapter = new LugaresAdapter(getActivity(), nombreLugares);
         lvLugares.setAdapter(adapter);
@@ -63,10 +63,10 @@ public class PistasFragment extends Fragment {
     private void mostrarPistaDe(String pistaSeleccionada) {
         Caso caso = ((MainActivity) getActivity()).getCaso();
         CarmenSanDiegoService carmenSanDiegoService = new Connection().getService();
-        carmenSanDiegoService.getPista(caso.getId(), pistaSeleccionada, new Callback<String>() {
+        carmenSanDiegoService.getPista(caso.getId(), pistaSeleccionada, new Callback<ResultadoJuego>() {
             @Override
-            public void success(String s, Response response) {
-                output.setText(s);
+            public void success(ResultadoJuego s, Response response) {
+                verificarSiEsFinDelJuego(s);
             }
 
             @Override
@@ -74,5 +74,21 @@ public class PistasFragment extends Fragment {
 
             }
         });
+    }
+
+    private void verificarSiEsFinDelJuego(ResultadoJuego s) {
+        if(s.getResultadoOrden() == null){
+            detallePista.setText(s.getPista());
+            detallePista.setTextColor(0xff424242);
+        }else {
+            if(s.getResultadoOrden().startsWith("Malas")) {
+                detallePista.setText(s.getResultadoOrden());
+                detallePista.setTextColor(0xffff0000);
+            }else {
+                detallePista.setText(s.getResultadoOrden());
+                detallePista.setTextColor(0xff00ff00);
+            }
+
+        }
     }
 }

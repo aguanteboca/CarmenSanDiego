@@ -152,7 +152,7 @@ class CarmenSanDiegoRestAPI {
             val Caso caso = CasosRespositorio.buscarCaso(Integer.valueOf(casoId))
             val RegistroLugar registro = caso.BuscarRegistroLugar(String.valueOf(nombreLugar))
 
-            ok((new ResultadoJuegoAppModel(caso,registro)).pista.toJson)
+            ok((new ResultadoJuegoAppModel(caso,registro)).toJson)
         }
         catch(UserException e) {
             badRequest(getErrorJson("El nombre del lugar no es valido o el id del caso es incorrecto"))

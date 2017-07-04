@@ -78,7 +78,6 @@ public class OrdenArrestoFragment extends Fragment {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.support_simple_spinner_dropdown_item, nombresVillanos);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-
         spinner.setAdapter(adapter);
     }
 
@@ -104,7 +103,6 @@ public class OrdenArrestoFragment extends Fragment {
 
         Spinner spinner = (Spinner) getView().findViewById(R.id.spinner_villanos);
         final String nombreVillanoSeleccionado = spinner.getSelectedItem().toString();
-
         int idVillanoSeleccionado = getIdVillano(villanos, nombreVillanoSeleccionado);
 
         CarmenSanDiegoService carmenSanDiegoService = new Connection().getService();
@@ -130,7 +128,5 @@ public class OrdenArrestoFragment extends Fragment {
         toastOrdenEmitida.setGravity(Gravity.NO_GRAVITY, 0, 0);
         toastOrdenEmitida.show();
     }
-
-
 }
 

@@ -5,6 +5,7 @@ import com.uis.carmensandiego.carmensandiego.bodies.ViajarBody;
 import com.uis.carmensandiego.carmensandiego.model.Caso;
 import com.uis.carmensandiego.carmensandiego.model.OrdenEmitida;
 import com.uis.carmensandiego.carmensandiego.model.Pista;
+import com.uis.carmensandiego.carmensandiego.model.ResultadoJuego;
 import com.uis.carmensandiego.carmensandiego.model.Viajar;
 import com.uis.carmensandiego.carmensandiego.model.Villano;
 
@@ -25,7 +26,7 @@ public interface CarmenSanDiegoService {
     void getVillanos(Callback<List<Villano>> callback);
 
     @GET("/pistaDelLugar/{casoId}/{nombreLugar}")
-    void getPista(@Path("casoId") Integer idCaso, @Path("nombreLugar") String lugar, Callback<String> callback);
+    void getPista(@Path("casoId") Integer idCaso, @Path("nombreLugar") String lugar, Callback<ResultadoJuego> callback);
 
     @POST("/emitirOrden")
     void emitirOrdenPara(@Body OrdenEmitida ordenEmitida, Callback<Caso> callback);
